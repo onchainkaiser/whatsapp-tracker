@@ -1,7 +1,5 @@
-const Database = require('better-sqlite3')
-
-const db = new Database('messages.db')
-
+const { DatabaseSync } = require('node:sqlite');
+const db = new DatabaseSync('messages.db');
 module.exports = db;
 
 db.exec(`
