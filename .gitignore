@@ -1,0 +1,6 @@
+node_modules/
+session/
+messages.db
+count.json
+.env
+.wwebjs_cache/
