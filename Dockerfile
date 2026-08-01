@@ -33,8 +33,6 @@ COPY . .
 
 # Tell Puppeteer to use the system Chromium we just installed,
 # instead of downloading its own copy (which caused the missing-library error).
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 EXPOSE 8080
 
