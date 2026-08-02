@@ -1,5 +1,5 @@
 const { DatabaseSync } = require('node:sqlite');
-const db = new DatabaseSync('messages.db');
+const db = new DatabaseSync('./data/messages.db');
 module.exports = db;
 
 db.exec(`

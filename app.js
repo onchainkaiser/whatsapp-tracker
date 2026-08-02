@@ -10,7 +10,7 @@ const db = require('./db.js');
 // ---------- WHATSAPP LISTENER ----------
 
 const client = new Client({
-  authStrategy: new LocalAuth({ dataPath: './session' }),
+  authStrategy: new LocalAuth({ dataPath: './data/session' }),
   puppeteer: {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   },
@@ -18,7 +18,7 @@ const client = new Client({
 
 let cryCount = 0;
 let latestQr = null;
-const countFile = './count.json';
+const countFile = './data/count.json';
 
 if (fs.existsSync(countFile)) {
   const data = fs.readFileSync(countFile, 'utf8');
