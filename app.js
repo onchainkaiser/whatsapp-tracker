@@ -12,7 +12,16 @@ const db = require('./db.js');
 const client = new Client({
   authStrategy: new LocalAuth({ dataPath: './data/session' }),
   puppeteer: {
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--disable-software-rasterizer',
+      '--disable-extensions',
+      '--no-zygote',
+      '--single-process',
+    ],
   },
 });
 
