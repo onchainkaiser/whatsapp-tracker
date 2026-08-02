@@ -60,6 +60,14 @@ client.on('message_create', (msg) => {
   }
 });
 
+client.on('disconnected', (reason) => {
+  console.log('⚠️ WhatsApp disconnected:', reason);
+});
+
+client.on('auth_failure', (msg) => {
+  console.log('⚠️ Auth failed:', msg);
+});
+
 client.initialize();
 
 // ---------- DASHBOARD SERVER ----------
