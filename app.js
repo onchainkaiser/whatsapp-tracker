@@ -19,8 +19,6 @@ const client = new Client({
       '--disable-gpu',
       '--disable-software-rasterizer',
       '--disable-extensions',
-      '--no-zygote',
-      '--single-process',
     ],
   },
 });
